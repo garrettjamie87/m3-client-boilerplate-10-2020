@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Home.css';
 
 function Home() {
   return (
-    <div> 
-      <h1>Home Page</h1>
+    <div className = 'home-div'> 
+      <h1>test</h1>
+      <img className ='Logo' src= "../../images/logo2.png" alt="logo" width="330" height="205"/>
+      
+
     </div>
   )
 }

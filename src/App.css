@@ -9,8 +9,9 @@ html, body {
 
 nav.navbar { 
   display: flex;
+  justify-content: flex-end;
   padding: 0px 20px;
-  background: #686de0; 
+  background: #ffdb83; 
 }
 
 button.navbar-button {

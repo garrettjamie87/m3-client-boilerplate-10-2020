@@ -1,4 +1,6 @@
 import axios from "axios";
+// import { Redirect } from 'react-router-dom';
+
 
 class AuthService {
   constructor() {
@@ -33,6 +35,7 @@ class AuthService {
     return pr;
   }
 
+
   me() {
     const pr = this.auth
       .get("/auth/me")
@@ -41,7 +44,6 @@ class AuthService {
     return pr;
   }
 }
-
 
 const authService = new AuthService();
 

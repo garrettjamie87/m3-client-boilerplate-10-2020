@@ -8,9 +8,15 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import AboutMe from './pages/AboutMe';
 import MyBuddies from './pages/MyBuddies'
+import BuddyDetail from './pages/BuddyDetail'
+import EditProfile from './pages/EditProfile'
+import MessageBoard from './pages/MessageBoard'
+
 
 import AnonRoute from './components/AnonRoute';
 import PrivateRoute from './components/PrivateRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -21,14 +27,22 @@ class App extends Component {
         
         <Navbar />
 
+
         <Switch>
           <Route exact path="/" component={Home} />
+
 
           <AnonRoute exact path="/signup" component={Signup} />
           <AnonRoute exact path="/login" component={Login} />
 
           <PrivateRoute exact path="/aboutme" component={AboutMe} />
           <PrivateRoute exact path="/mybuddies" component={MyBuddies} />
+          <PrivateRoute exact path="/buddydetail/:id" component={BuddyDetail} />
+          <PrivateRoute exact path="/editprofile" component={EditProfile} />
+          <PrivateRoute exact path="/messageboard" component={MessageBoard} />
+
+
+
 
         </Switch>
       </div>

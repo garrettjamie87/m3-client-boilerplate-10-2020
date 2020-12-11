@@ -1,9 +1,20 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
 
 .home-div{
       background:#ffdb83;
-}
-/* 
-.logo{
+      height: 600px;
       text-align: center;
-} */
+
+}
+
+.strap-line {
+      font-family: 'Andika New Basic', sans-serif;
+      color:black;
+
+   
+
+}
+
+.buttons {
+      margin-top: 50px;
+}

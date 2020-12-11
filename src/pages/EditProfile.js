@@ -5,7 +5,7 @@ class EditProfile extends Component {
       render() {
             return (
                   <div>
-                     <h1>Buddy detail</h1>   
+                     <h1>Edit Profile</h1>   
                   </div>
             )
       }

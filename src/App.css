@@ -4,7 +4,7 @@ html, body {
 }
 
 .App {
-  padding: 20px;;
+  padding: 20px;
 }
 
 nav.navbar { 
@@ -24,4 +24,8 @@ button.navbar-button {
 #home-btn {
   color: white;
   text-decoration: none;
+}
+
+.container {
+  padding: 0 !important;
 }

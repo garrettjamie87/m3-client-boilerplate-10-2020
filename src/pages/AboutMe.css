@@ -1,8 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-.table {
-      background-color: #2EAFA5;
-      text-align: center;
-      border: solid;
-      font-family: 'Oswald', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 
+.aboutme {
+  padding: 25px;
+  height: 100vh;
+}
+
+.aboutme h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+}
+
+.aboutme h2 {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.table {
+  background-color: #2eafa5;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  border-radius: 25px;
+  box-shadow: 5px 5px rgba(0, 98, 90, 0.4), 10px 10px rgba(0, 98, 90, 0.3),
+    15px 15px rgba(0, 98, 90, 0.2), 20px 20px rgba(0, 98, 90, 0.1),
+    25px 25px rgba(0, 98, 90, 0.05);
+  padding: 25px;
+}
+
+.table label {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.table button {
+  margin: 15px 0;
+  background-color: #e75481;
+  border: none;
 }

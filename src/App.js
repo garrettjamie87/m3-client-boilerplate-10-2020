@@ -9,8 +9,10 @@ import Login from './pages/Login';
 import AboutMe from './pages/AboutMe';
 import MyBuddies from './pages/MyBuddies'
 import BuddyDetail from './pages/BuddyDetail'
+import MyBuddiesList from './pages/MyBuddiesList'
 import EditProfile from './pages/EditProfile'
 import MessageBoard from './pages/MessageBoard'
+
 
 
 import AnonRoute from './components/AnonRoute';
@@ -38,6 +40,8 @@ class App extends Component {
           <PrivateRoute exact path="/aboutme" component={AboutMe} />
           <PrivateRoute exact path="/mybuddies" component={MyBuddies} />
           <PrivateRoute exact path="/buddydetail/:id" component={BuddyDetail} />
+          <PrivateRoute exact path="/mybuddieslist" component={MyBuddiesList} />
+
           <PrivateRoute exact path="/editprofile" component={EditProfile} />
           <PrivateRoute exact path="/messageboard" component={MessageBoard} />
 

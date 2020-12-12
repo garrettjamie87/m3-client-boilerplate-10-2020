@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { withAuth } from '../context/auth-context';
 import axios from "axios";
+import "./buddydetail.css";
+import Button from "react-bootstrap/Button";
+
 
 class BuddyDetail extends Component {
       
@@ -37,14 +40,15 @@ class BuddyDetail extends Component {
 
       render() {
             return (
-                  <div>
+                  <div className="buddydetail">
                      <h1>Buddy detail</h1>  
                      <div>{this.state.oneBud.username}</div> 
                      {this.state.isSaved ?
                  
-                  <button>Saved</button>:
-                  <button onClick = {this.handleSave}>Save to mybuddies list</button>}
-
+                        <Button>Saved</Button>:
+                        <Button onClick={this.handleSave}>
+            Save to mybuddies list &#x2192;
+          </Button>}
 
                   </div>
             )

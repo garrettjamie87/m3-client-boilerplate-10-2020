@@ -1,0 +1,17 @@
+.buddydetail {
+  height: 100vh;
+  padding: 25px;
+}
+
+.buddydetail h1 {
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.buddydetail button {
+  margin-top: 10px;
+  background-color: #e75481;
+  border: none;
+}

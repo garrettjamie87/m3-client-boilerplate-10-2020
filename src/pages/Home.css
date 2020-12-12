@@ -1,40 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap");
+
+.home {
+  text-align: center;
+  height: 100vh;
+  padding: 25px;
+}
 
 .logo {
-      width: 320px;
-      height: auto;
+  width: 250px;
+  height: auto;
+  margin: 40px 0;
 }
 
-.home-div{
-      background:#ffdb83;
-      height: 600px;
-      text-align: center;
-
-}
-
-.strap-line h3 {
-      font-family: 'Andika New Basic', sans-serif;
-      color:black;
-      font-size: 20px;
-
-   
-
+.home h1 {
+  font-family: "Andika New Basic", sans-serif;
+  color: black;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .signup-button {
-      margin-top: 50px;
-      background-color: #2EAFA5 !important;
-      border: none !important ;
+  margin-top: 50px;
+  background-color: #000 !important;
+  border: none !important ;
 }
 
-.login-button{
-      
-      margin-top: 50px;
-      background-color: grey !important;
-      border: none !important ;
-
+.login-button {
+  margin-top: 50px;
+  background-color: #2eafa5 !important;
+  border: none !important ;
 }
 
 .buttons {
-      padding: 5%;
+  padding: 5%;
 }

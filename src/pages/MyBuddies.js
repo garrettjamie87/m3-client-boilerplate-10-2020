@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { withAuth } from '../context/auth-context';
 import axios from "axios";
 import {Link} from "react-router-dom"
+import "./mybuddies.css";
+
 
  class MyBuddies extends Component {
       constructor(props){
@@ -37,7 +39,7 @@ import {Link} from "react-router-dom"
             console.log(this.state.userInfo)
 
             return(
-                  <div>
+                  <div className = 'mybuddies'>
                      <h1>Your Matches</h1>   
                         {this.state.listOfBuddies.map((buddy)=>{
                               console.log('buddy', buddy, this.props.user)

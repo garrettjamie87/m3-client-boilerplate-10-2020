@@ -3,6 +3,8 @@ import { withAuth } from '../context/auth-context';
 import axios from "axios";
 import {Link} from "react-router-dom"
 import "./mybuddies.css";
+import Button from "react-bootstrap/Button";
+
 
 
  class MyBuddies extends Component {
@@ -65,6 +67,7 @@ import "./mybuddies.css";
                           )
                     }
                     )}
+                    <Button href= '/EditProfile' className='mybuddiesbutton'>Edit Profile</Button>
                   </div>
             )
       }

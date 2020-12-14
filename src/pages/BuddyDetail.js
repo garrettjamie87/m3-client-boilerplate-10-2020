@@ -42,7 +42,15 @@ class BuddyDetail extends Component {
             return (
                   <div className="buddydetail">
                      <h1>Buddy detail</h1>  
-                     <div>{this.state.oneBud.username}</div> 
+                     <h5>Name</h5>
+                     <div>{this.state.oneBud.username}</div> <br/>
+                     <h5>Interested in</h5>
+                     <div>{this.state.oneBud.topics}</div>  <br/>
+                     <h5>Looking for </h5>
+                     <div>{this.state.oneBud.language}</div>  <br/>
+
+
+
                      {this.state.isSaved ?
                  
                         <Button>Saved</Button>:

@@ -16,3 +16,10 @@
       border: none;
     }
     
+    .avatar{
+      height:100px;
+    }
+
+    .username {
+      list-style-type: none;
+    }

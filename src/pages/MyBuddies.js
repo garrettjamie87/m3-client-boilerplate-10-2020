@@ -4,6 +4,8 @@ import axios from "axios";
 import {Link} from "react-router-dom"
 import "./mybuddies.css";
 import Button from "react-bootstrap/Button";
+import avatar from "../images/blankavatar.png";
+
 
 
 
@@ -53,12 +55,13 @@ import Button from "react-bootstrap/Button";
                                       
                                       <Link to = {`/buddydetail/${buddy._id}`}>
                                     
-                                    <ol>
-                                         <li> {buddy.username}</li>
-                                         <li> {buddy.level}</li>
-                                         <li> {buddy.topics}</li>
+                                    <ul>
+                                    <img className= 'avatar' src= {avatar}/>
+                                         <li className = 'username'> {buddy.username}</li>
+                                         {/* <li> {buddy.level}</li>
+                                         <li> {buddy.topics}</li> */}
                                           
-                                     </ol>
+                                     </ul>
                                     
                                      </Link>
 

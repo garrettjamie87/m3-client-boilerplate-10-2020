@@ -38,13 +38,14 @@ class EditProfile extends Component {
   handleDelete = event => {
       event.preventDefault();
       const {  sex, topics, level, language } = this.state;
+      const me = this.props.user._id
       axios
         .delete   (
-          "http://localhost:5000/api/user/delete",
+          `http://localhost:5000/api/user/delete/${me}`,
           { sex, topics, level, language },
           { withCredentials: true }
         )
-        .then(() => this.props.history.push("/mybuddies"))
+        .then(() => this.props.history.push("/"))
   
         .catch(err => console.log(err));  
     };

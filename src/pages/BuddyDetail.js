@@ -11,9 +11,10 @@ class BuddyDetail extends Component {
       isSaved:false}
 
       handleSave = () => {
-      const userID = this.props.match.params.id
+      const userID = this.props.user._id
+      const budID = this.props.match.params.id
       console.log(userID)
-      axios.put(`http://localhost:5000/api/buddy/${userID}`, {withCredentials: true})
+      axios.put(`http://localhost:5000/api/buddy/${budID}/${userID}`, {withCredentials: true})
       .then((oneBuddyFound) => {
             console.log(oneBuddyFound)
             this.setState({

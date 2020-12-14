@@ -12,7 +12,8 @@ class BuddyDetail extends Component {
 
       handleSave = () => {
       const userID = this.props.match.params.id
-      axios.post(`http://localhost:5000/api/buddy/${userID}`, {withCredentials: true})
+      console.log(userID)
+      axios.put(`http://localhost:5000/api/buddy/${userID}`, {withCredentials: true})
       .then((oneBuddyFound) => {
             console.log(oneBuddyFound)
             this.setState({
@@ -54,7 +55,7 @@ class BuddyDetail extends Component {
                      {this.state.isSaved ?
                  
                         <Button>Saved</Button>:
-                        <Button onClick={this.handleSave}>
+                        <Button onClick = {this.handleSave}>
             Save to mybuddies list &#x2192;
           </Button>}
 

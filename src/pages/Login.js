@@ -24,20 +24,20 @@ class Login extends Component {
 
     return (
       <div className = 'login-page'>
-        <h1 className='title'>Login</h1>
+        <h1 className='title'>LOG IN</h1>
 
         <form onSubmit={this.handleFormSubmit}>
           
-          <label className = 'labels'>Username</label><br/>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/><br/>
+          <label className = 'labels'>USERNAME</label><br/>
+          <input className ='inpoot' type="text" name="username" value={username} onChange={this.handleChange}/><br/>
 
-          <label className = 'labels'>Password</label><br/>
-          <input type="password" name="password" value={password} onChange={this.handleChange} /><br/>
+          <label className = 'labels'>PASSWORD</label><br/>
+          <input className = 'inpoot' type="password" name="password" value={password} onChange={this.handleChange} /><br/>
 
-          <Button className = 'login-buttonZ' type="submit" value="Login" >Login &#x2192;</Button>
+          <Button className = 'login-buttonZ' type="submit" value="Login" >LOG IN &#x2192;</Button>
         </form>
       </div>
-    );
+    );  
   }
 }
 

@@ -4,6 +4,8 @@ import axios from "axios";
 import "./buddydetail.css";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom"
+import avatar from "../images/blankavatar.png";
+
 
 
 
@@ -60,25 +62,27 @@ class BuddyDetail extends Component {
       render() {
             return (
                   <div className="buddy-detail">
-                     <h1>About {this.state.oneBud.username} </h1>  
-                     <h5>Name</h5>
-                     <div>{this.state.oneBud.username}</div> <br/>
-                     <h5>Interested in</h5>
-                     <div>{this.state.oneBud.topics}</div>  <br/>
-                     <h5>Looking for </h5>
-                     <div>{this.state.oneBud.language}</div>  <br/>
+                     <h1>YOUR MATCH</h1>  
+                     <img className= 'avatar' src= {avatar}/>
+
+                     <h5 className = 'subs'>NAME:</h5>
+                     <div className = 'info'>{this.state.oneBud.username}</div> <br/>
+                     <h5 className = 'subs'>INTERESTED IN:</h5>
+                     <div className = 'info'>{this.state.oneBud.topics}</div>  <br/>
+                     <h5 className = 'subs'>LANGUAGE:</h5>
+                     <div className = 'info'>{this.state.oneBud.language}</div>  <br/>
 
 
 
                      {this.state.isSaved ?
                  
-                        <Button>Saved</Button>:
+                        <Button className ='buttons'>SAVED</Button>:
                         <Button onClick = {this.handleSave}>
-            Save to mybuddies list 
+            SAVE TO MY BUDDIES
           </Button>} <br/>
-          <Button onClick = {this.handleConversation}>Send a message</Button><br/>
+          <Button onClick = {this.handleConversation}>SEND A MESSAGE</Button><br/>
 
-          <Link to = {`/mybuddieslist/${this.props.user._id}`}>View my buddies list</Link>
+          <Link to = {`/mybuddieslist/${this.props.user._id}`}>VIEW MY BUDDIES</Link>
 
                   </div>
             )

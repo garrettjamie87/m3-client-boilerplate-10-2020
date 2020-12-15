@@ -51,7 +51,7 @@ import avatar from "../images/blankavatar.png";
             return(
                   <div className = 'mybuddies'>
                     
-                     <h1>Your Matches</h1>   
+                     <h1>YOUR MATCHES</h1>   
                         
                         {this.state.listOfBuddies.map((buddy)=>{
                               
@@ -79,7 +79,7 @@ import avatar from "../images/blankavatar.png";
                           )
                     }
                     )}
-                    <Button href= '/EditProfile' className='mybuddiesbutton'>Edit Profile</Button>
+                    <Button href= '/EditProfile' className='mybuddiesbutton'>EDIT PROFILE &#x2192;</Button>
 
                   </div>
             )

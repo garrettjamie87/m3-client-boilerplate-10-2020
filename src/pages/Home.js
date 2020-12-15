@@ -17,10 +17,10 @@ function Home() {
           size="lg"
           block
         >
-          LOGIN &#x2192;
+          LOG IN &#x2192;
         </Button>
         <Button className="signup-button" href="/signup" size="lg" block>
-          SIGNUP &#x2192;
+          SIGN UP &#x2192;
         </Button>
       </div>
     </div>

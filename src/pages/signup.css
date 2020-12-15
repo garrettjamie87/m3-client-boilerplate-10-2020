@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins&display=swap');
 
 .sign-up-page {
 text-align: center;
@@ -5,13 +6,11 @@ text-align: center;
   padding-top: 150px; 
 }
 
-.title {
-  font-family: "Andika New Basic", sans-serif;
+.sign-up-page .title {
+  
   color: black;
   font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+font-family: 'Oswald',  sans-serif;
 }
 
 
@@ -19,9 +18,23 @@ text-align: center;
       margin-top: 50px;
       background-color: #000 !important;
       border: none !important ;
+      font-family: 'Poppins', sans-serif;
     }
 
 .login {
       color: #2eafa5;
       /* margin: 0; */
+}
+
+.call {
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.labels {
+  margin-top:5px;
+  font-family: 'Oswald', sans-serif;
+}
+.inpoot{
+  font-family: 'Poppins', sans-serif;
 }

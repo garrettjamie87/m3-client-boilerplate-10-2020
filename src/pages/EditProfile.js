@@ -54,13 +54,13 @@ class EditProfile extends Component {
     return (
       <div className="aboutme">
         <h1>
-          Edit or Delete your profile <u>{this.props.user && this.props.user.username}</u>
+         YOUR PROFILE <u>{this.props.user && this.props.user.username}</u>
         </h1>
         {/* <h2>Tell us more about yourself</h2> */}
 
         <div className="table">
           <form onSubmit={this.handleFormEdit}>
-            <label for="sex">Sex: </label>
+            <label for="sex">SEX: </label>
             <br />
             <select
               className="input-field"
@@ -68,12 +68,12 @@ class EditProfile extends Component {
               name="sex"
               onChange={this.handleChange}
             >
-              <option value="I'm a male man ">'I'm a male man'</option>
-              <option value="I'm a female lady">'I'm a female lady'</option>
+              <option value="I'm a male man ">I'm a male man</option>
+              <option value="I'm a female lady">I'm a female lady</option>
             </select>
             <br />
             <br />
-            <label for="topics">The topics that interest me are: </label>
+            <label for="topics">TOPICS THAT INTEREST ME: </label>
             <br />
             <select
               className="input-field"
@@ -81,13 +81,13 @@ class EditProfile extends Component {
               name="topics"
               onChange={this.handleChange}
             >
-              <option value="Sports">'Sports'</option>
-              <option value="The Arts">'The Arts'</option>
-              <option value="Politics">'Politics'</option>
+              <option value="Sports">Sports</option>
+              <option value="The Arts">The Arts</option>
+              <option value="Politics">Politics</option>
             </select>
             <br />
             <br />
-            <label for="level">My level is: </label>
+            <label for="level">MY LEVEL: </label>
             <br />
             <select
               className="input-field"
@@ -95,13 +95,13 @@ class EditProfile extends Component {
               name="level"
               onChange={this.handleChange}
             >
-              <option value="Elementary">"Elementary"</option>
-              <option value="Intermediate">"Intermediate"</option>
-              <option value="Advanced">"Advanced"</option>
+              <option value="Elementary">Elementary</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
             </select>
             <br />
             <br />
-            <label for="language">Language: </label>
+            <label for="language">LANGUAGE: </label>
             <br />
             <select
               className="input-field"
@@ -110,20 +110,20 @@ class EditProfile extends Component {
               onChange={this.handleChange}
             >
               <option value="I'm Spanish looking for English">
-                "I'm Spanish looking for English"
+                Spanish seeking English
               </option>
               <option value="I'm English looking for Spanish">
-                "I'm English looking for Spanish'"
+                English seeking Spanish
               </option>
             </select>
             <br /> <br />
-            <Button variant="primary" type="submit">
-              Edit &#x2192;
+            <Button className ='button' variant="primary" type="submit">
+              EDIT &#x2192;
             </Button>
             
           </form>
-          <Button onClick = {this.handleDelete} variant="primary" type="submit">
-              Delete &#x2192;
+          <Button className = 'button' onClick = {this.handleDelete} variant="primary" type="submit">
+              DELETE &#x2192;
             </Button>
         </div>
       </div>

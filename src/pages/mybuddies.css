@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins&display=swap');
+
 .mybuddies{
       height: 100vh;
       padding: 25px;
@@ -5,23 +7,25 @@
     }
     
     .mybuddies h1 {
-      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-        -1px 1px 0 #000, 1px 1px 0 #000;
-      color: white;
-      margin-bottom: 40px;
-      text-align: center;
+      font-family: 'Oswald', sans-serif;
+  color: black;
+  font-size: 2rem;
     }
     
-    .mybuddiesbutton button {
+    .mybuddiesbutton{
       margin-top: 10px;
-      background-color: #e75481;
-      border: none;
+      background-color: #e75481 !important;
+      border: none !important;
+      font-family: 'Poppins', sans-serif;
     }
     
     .avatar{
-      height:100px;
+      height:70px;
     }
 
     .username {
       list-style-type: none;
+      color: #2eafa5;
+      font-family: 'Poppins', sans-serif;
+
     }

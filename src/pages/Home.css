@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins&display=swap');
 .home {
   text-align: center;
   height: 100vh;
@@ -13,12 +12,12 @@
 }
 
 .home h1 {
-  font-family: "Andika New Basic", sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: black;
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+  text-shadow: 4px 3px 0px #fff, 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
 
 .signup-button {
@@ -35,4 +34,5 @@
 
 .buttons {
   padding: 5%;
+  font-family: 'Poppins', sans-serif;
 }

@@ -44,10 +44,10 @@ class MyBuddiesList extends Component {
 
       
       render() {
-console.log('somebullshithere')
+            
             return(
                   <div className = 'my-buddies-list'>
-                     <h1>Your Buddies</h1>   
+                     <h1 className='heading'>YOUR BUDDIES</h1>   
                         {this.state.listOfBuddies.buddyId && this.state.listOfBuddies.buddyId.map((buddy)=>{
                               return (
                               <div >

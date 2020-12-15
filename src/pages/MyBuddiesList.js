@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { withAuth } from '../context/auth-context';
 import axios from "axios";
 import {Link} from "react-router-dom"
+import "./mybuddieslist.css";
+import Button from "react-bootstrap/Button";
+import avatar from "../images/blankavatar.png";
+
+
 
 
 class MyBuddiesList extends Component {
@@ -41,26 +46,28 @@ class MyBuddiesList extends Component {
       render() {
 console.log('somebullshithere')
             return(
-                  <div>
+                  <div className = 'my-buddies-list'>
                      <h1>Your Buddies</h1>   
                         {this.state.listOfBuddies.buddyId && this.state.listOfBuddies.buddyId.map((buddy)=>{
                               return (
-                              <div>
+                              <div >
                                 
-                                   (
+                                   
                                       
                                       <Link to = {`/buddydetail/${buddy._id}`}>
                                     
-                                    <ol>
+                                    <ul className = 'list'>
+                                    <img className= 'avatar' src= {avatar}/>
+
                                          <li> {buddy.username}</li>
-                                         <li> {buddy.level}</li>
-                                         <li> {buddy.topics}</li>
+                                         {/* <li> {buddy.level}</li>
+                                         <li> {buddy.topics}</li> */}
                                         
-                                     </ol>
+                                     </ul>
                                     
                                      </Link>
 
-                                     <button onClick = {()=>{this.handleDelete(buddy._id)}}>DELETE</button>
+                                     <Button className='delete' onClick = {()=>{this.handleDelete(buddy._id)}}>DELETE</Button>
                                           
                           </div>
                           )

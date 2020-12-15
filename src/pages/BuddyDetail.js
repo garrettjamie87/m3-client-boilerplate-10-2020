@@ -44,11 +44,13 @@ class BuddyDetail extends Component {
 
      }
 
-     handleConversation(){
-           const convoID = this.state.oneBud._id
-           axios.post(`${process.env.REACT_APP_API_URL}/api/createconvo/${convoID}`, {withCredentials: true})
+     handleConversation = () => {
+           const userOne = this.props.user._id
+           const userTwo = this.state.oneBud._id
+          
+           axios.post(`${process.env.REACT_APP_API_URL}/api/createconvo/${userOne}/${userTwo}`, {withCredentials: true})
            .then((conversationCreated) => {
-            this.props.history.push('/mybuddieslist')
+            this.props.history.push(`/messageboard`)
 
           
       })
@@ -57,8 +59,8 @@ class BuddyDetail extends Component {
 
       render() {
             return (
-                  <div className="buddydetail">
-                     <h1>Buddy detail</h1>  
+                  <div className="buddy-detail">
+                     <h1>About {this.state.oneBud.username} </h1>  
                      <h5>Name</h5>
                      <div>{this.state.oneBud.username}</div> <br/>
                      <h5>Interested in</h5>
@@ -73,8 +75,8 @@ class BuddyDetail extends Component {
                         <Button>Saved</Button>:
                         <Button onClick = {this.handleSave}>
             Save to mybuddies list 
-          </Button>}
-          <Button onClick = {this.handleConversation}>Send a message</Button>
+          </Button>} <br/>
+          <Button onClick = {this.handleConversation}>Send a message</Button><br/>
 
           <Link to = {`/mybuddieslist/${this.props.user._id}`}>View my buddies list</Link>
 

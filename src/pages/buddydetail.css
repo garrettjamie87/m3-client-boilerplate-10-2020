@@ -1,16 +1,18 @@
-.buddydetail {
+.buddy-detail {
   height: 100vh;
   padding: 25px;
+  text-align: center;
 }
 
-.buddydetail h1 {
+.buddy-detail h1 {
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
   color: white;
   margin-bottom: 40px;
+  text-align: center;
 }
 
-.buddydetail button {
+.buddy-detail button {
   margin-top: 10px;
   background-color: #e75481;
   border: none;

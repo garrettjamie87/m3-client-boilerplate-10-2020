@@ -49,7 +49,7 @@ import avatar from "../images/blankavatar.png";
       render() {
 
             return(
-                  <div>
+                  <div className = 'mybuddies'>
                     
                      <h1>Your Matches</h1>   
                         

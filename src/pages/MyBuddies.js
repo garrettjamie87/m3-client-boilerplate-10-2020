@@ -18,13 +18,13 @@ import avatar from "../images/blankavatar.png";
       }
 
       getMyBuddies = () =>{
-            axios.get('http://localhost:5000/api/matchpage', {withCredentials: true})
+            axios.get(`${process.env.REACT_APP_API_URL}/api/matchpage`, {withCredentials: true})
             .then((ourBuddies) => {
                   this.setState({
                         listOfBuddies:ourBuddies.data
                   })
             })
-            axios.get(`http://localhost:5000/api/matchpage/${this.props.user._id}`)
+            axios.get(`${process.env.REACT_APP_API_URL}/api/matchpage/${this.props.user._id}`)
             .then((actualUser)=> {
                   this.setState({
                         userInfo:actualUser.data

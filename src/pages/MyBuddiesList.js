@@ -12,39 +12,41 @@ class MyBuddiesList extends Component {
             } 
       }
 
-      getMyBuddies = () =>{
-            axios.get('http://localhost:5000/api/mybuddypage', {withCredentials: true})
+      getMyBuddiesList = () =>{
+            axios.get(`${process.env.REACT_APP_API_URL}/api/mybuddypage/${this.props.match.params.id}`, {withCredentials: true})
             .then((ourBuddies) => {
+                  console.log(ourBuddies.data)
                   this.setState({
                         listOfBuddies:ourBuddies.data
                   })
             })
-            axios.get(`http://localhost:5000/api/mybuddypage/${this.props.user._id}`)
-            .then((actualUser)=> {
-                  this.setState({
-                        userInfo:actualUser.data
-                  })
-            })
+           
       }
 
-     
+      handleDelete = (buddyId) =>{
+      axios.delete(`${process.env.REACT_APP_API_URL}/api/buddy/${buddyId}/user/${this.props.user._id}`, {withCredentials: true})
+      .then((response)=>{
+      console.log(response)
+      this.getMyBuddiesList()
+      })
+
+      }
+
 
       componentDidMount(){
-            this.getMyBuddies()
+            this.getMyBuddiesList()
       }
 
       
       render() {
-            console.log(this.state.userInfo)
-
+console.log('somebullshithere')
             return(
                   <div>
                      <h1>Your Buddies</h1>   
-                        {this.state.listOfBuddies.map((buddy)=>{
-                              console.log('buddy', buddy, this.props.user)
+                        {this.state.listOfBuddies.buddyId && this.state.listOfBuddies.buddyId.map((buddy)=>{
                               return (
                               <div>
-                                    {this.state.userInfo.level === buddy.level && this.state.userInfo.sex === buddy.sex ? 
+                                    {/* {this.state.userInfo.level === buddy.level && this.state.userInfo.sex === buddy.sex ?  */}
                                     
                                     (
                                       
@@ -54,12 +56,13 @@ class MyBuddiesList extends Component {
                                          <li> {buddy.username}</li>
                                          <li> {buddy.level}</li>
                                          <li> {buddy.topics}</li>
-                                          
+                                        
                                      </ol>
                                     
                                      </Link>
 
-                                ): null}
+                                     <button onClick = {()=>{this.handleDelete(buddy._id)}}>DELETE</button>
+                                          
                           </div>
                           )
                     }

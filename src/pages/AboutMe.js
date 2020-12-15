@@ -20,7 +20,7 @@ class AboutMe extends Component {
     const { sex, topics, level, language } = this.state;
     axios
       .post(
-        "http://localhost:5000/api/homepage",
+        `${process.env.REACT_APP_API_URL}/api/homepage`,
         { sex, topics, level, language },
         { withCredentials: true }
       )

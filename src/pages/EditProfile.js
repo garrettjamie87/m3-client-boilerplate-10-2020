@@ -20,7 +20,7 @@ class EditProfile extends Component {
     const { sex, topics, level, language } = this.state;
     axios
       .put(
-        "http://localhost:5000/api/user/edit",
+        `${process.env.REACT_APP_API_URL}/api/user/edit`,
         { sex, topics, level, language },
         { withCredentials: true }
       )
@@ -41,7 +41,7 @@ class EditProfile extends Component {
       const me = this.props.user._id
       axios
         .delete   (
-          `http://localhost:5000/api/user/delete/${me}`,
+          `${process.env.REACT_APP_API_URL}/api/user/delete/${me}`,
           { sex, topics, level, language },
           { withCredentials: true }
         )

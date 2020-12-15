@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { withAuth } from './../context/auth-context';
+import "./login.css";
+import Button from "react-bootstrap/Button";
+
 
 class Login extends Component {
   state = { username: "", password: "" };
@@ -20,18 +23,18 @@ class Login extends Component {
     const { username, password } = this.state;
 
     return (
-      <div>
-        <h1>Login</h1>
+      <div className = 'login-page'>
+        <h1 className='title'>Login</h1>
 
         <form onSubmit={this.handleFormSubmit}>
           
-          <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
+          <label className = 'labels'>Username</label><br/>
+          <input type="text" name="username" value={username} onChange={this.handleChange}/><br/>
 
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={this.handleChange} />
+          <label className = 'labels'>Password</label><br/>
+          <input type="password" name="password" value={password} onChange={this.handleChange} /><br/>
 
-          <input type="submit" value="Login" />
+          <Button className = 'login-buttonZ' type="submit" value="Login" >Login &#x2192;</Button>
         </form>
       </div>
     );

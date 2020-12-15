@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withAuth } from './../context/auth-context';
+import "./signup.css";
+import Button from "react-bootstrap/Button";
+
+
 
 class Signup extends Component {
   state = { username: "", password: "" };
@@ -20,22 +24,24 @@ class Signup extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <h1>Sign Up</h1>
+      <div className ='sign-up-page'>
+        <h1 className ='title'>SIGN UP</h1>
 
-        <form onSubmit={this.handleFormSubmit}>
+        <form className = 'sign-up' onSubmit={this.handleFormSubmit}>
 
-          <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange} />
+          <label>Username</label><br/>
+          <input type="text" name="username" value={username} onChange={this.handleChange} /><br/>
 
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={this.handleChange} />
+          <label>Password</label><br/>
+          <input type="password" name="password" value={password} onChange={this.handleChange} /><br/>
 
-          <input type="submit" value="Signup" />
+           <Button className= 'signup-button' type="submit" value="Signup">
+           SIGNUP &#x2192;
+           </Button>
         </form>
         
         <p>Already have account?</p>
-        <Link to={"/login"}> Login</Link>
+        <Link className ='login' to={"/login"}> Login</Link>
       </div>
     );
   }

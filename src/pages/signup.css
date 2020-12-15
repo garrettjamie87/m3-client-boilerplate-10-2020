@@ -1,0 +1,27 @@
+
+.sign-up-page {
+text-align: center;
+  height: 100vh;
+  padding-top: 150px; 
+}
+
+.title {
+  font-family: "Andika New Basic", sans-serif;
+  color: black;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+.signup-button {
+      margin-top: 50px;
+      background-color: #000 !important;
+      border: none !important ;
+    }
+
+.login {
+      color: #2eafa5;
+      /* margin: 0; */
+}

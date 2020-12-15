@@ -13,41 +13,50 @@ import avatar from "../images/blankavatar.png";
       constructor(props){
             super(props)
             this.state = {
-              listOfBuddies: []
+              listOfBuddies: [],
+              userInfo:{}
+
             } 
       }
 
       getMyBuddies = () =>{
             axios.get(`${process.env.REACT_APP_API_URL}/api/matchpage`, {withCredentials: true})
             .then((ourBuddies) => {
+                  console.log(ourBuddies)
                   this.setState({
                         listOfBuddies:ourBuddies.data
                   })
             })
-            axios.get(`${process.env.REACT_APP_API_URL}/api/matchpage/${this.props.user._id}`)
-            .then((actualUser)=> {
-                  this.setState({
-                        userInfo:actualUser.data
-                  })
-            })
+            
       }
 
-     
+      getOneBuddy = () =>{
+            axios.get(`${process.env.REACT_APP_API_URL}/api/matchpage/${this.props.user._id}`, {withCredentials: true})
+      .then((actualUser)=> {
+            console.log('hahahahahaahah', actualUser)
+            this.setState({
+                  userInfo:actualUser.data
+            })
+      })
+}
 
       componentDidMount(){
             this.getMyBuddies()
+            this.getOneBuddy()
       }
 
       
       render() {
-            console.log(this.state.userInfo)
 
             return(
-                  <div className = 'mybuddies'>
+                  <div>
+                    
                      <h1>Your Matches</h1>   
+                        
                         {this.state.listOfBuddies.map((buddy)=>{
-                              console.log('buddy', buddy, this.props.user)
+                              
                               return (
+                              
                               <div>
                                     {this.state.userInfo.level === buddy.level && this.state.userInfo.sex === buddy.sex ? 
                                     
@@ -71,6 +80,7 @@ import avatar from "../images/blankavatar.png";
                     }
                     )}
                     <Button href= '/EditProfile' className='mybuddiesbutton'>Edit Profile</Button>
+
                   </div>
             )
       }

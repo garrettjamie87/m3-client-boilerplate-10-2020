@@ -46,9 +46,8 @@ console.log('somebullshithere')
                         {this.state.listOfBuddies.buddyId && this.state.listOfBuddies.buddyId.map((buddy)=>{
                               return (
                               <div>
-                                    {/* {this.state.userInfo.level === buddy.level && this.state.userInfo.sex === buddy.sex ?  */}
-                                    
-                                    (
+                                
+                                   (
                                       
                                       <Link to = {`/buddydetail/${buddy._id}`}>
                                     

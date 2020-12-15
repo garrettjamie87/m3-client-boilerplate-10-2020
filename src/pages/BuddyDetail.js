@@ -72,7 +72,7 @@ class BuddyDetail extends Component {
                  
                         <Button>Saved</Button>:
                         <Button onClick = {this.handleSave}>
-            Save to mybuddies list &#x2192;
+            Save to mybuddies list 
           </Button>}
           <Button onClick = {this.handleConversation}>Send a message</Button>
 

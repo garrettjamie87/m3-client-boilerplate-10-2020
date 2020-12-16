@@ -43,7 +43,7 @@ class App extends Component {
           <PrivateRoute exact path="/mybuddieslist/:id" component={MyBuddiesList} />
 
           <PrivateRoute exact path="/editprofile" component={EditProfile} />
-          <PrivateRoute exact path="/messageboard" component={MessageBoard} />
+          <PrivateRoute exact path="/messageboard/:id" component={MessageBoard} />
 
 
 

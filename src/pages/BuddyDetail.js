@@ -52,7 +52,8 @@ class BuddyDetail extends Component {
           
            axios.post(`${process.env.REACT_APP_API_URL}/api/createconvo/${userOne}/${userTwo}`, {withCredentials: true})
            .then((conversationCreated) => {
-            this.props.history.push(`/messageboard`)
+                 console.log(conversationCreated, 'hdhdhdhdhdhdhdhdhdhd')
+            this.props.history.push(`/messageboard/${conversationCreated.data._id}`)
 
           
       })

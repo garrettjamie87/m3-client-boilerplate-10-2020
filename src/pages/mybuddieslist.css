@@ -25,3 +25,12 @@
       color: black;
       text-align: center;
     }
+
+.grid {
+      display: flexbox;
+      flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: stretch;
+	align-items: center;
+	align-content: stretch;
+}

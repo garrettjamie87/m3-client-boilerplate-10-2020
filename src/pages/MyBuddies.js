@@ -61,7 +61,7 @@ import avatar from "../images/blankavatar.png";
                                     {this.state.userInfo.level === buddy.level && this.state.userInfo.sex === buddy.sex ? 
                                     
                                     (
-                                      
+                                      <div className = 'grid'>
                                       <Link to = {`/buddydetail/${buddy._id}`}>
                                     
                                     <ul>
@@ -73,7 +73,7 @@ import avatar from "../images/blankavatar.png";
                                      </ul>
                                     
                                      </Link>
-
+                                    </div>
                                 ): null}
                           </div>
                           )

@@ -6,7 +6,8 @@ class MessageBoard extends Component {
       constructor(props){
             super(props)
             this.state = {
-              convo: []
+              convo: [],
+             message:''
             } 
       }
 
@@ -23,25 +24,34 @@ class MessageBoard extends Component {
             axios.post(`${process.env.REACT_APP_API_URL}/api/messages/${receiverId}/${conversationID}/${this.props.user._id}`,{message:this.state.message},{ withCredentials: true })
               .then((response) =>{
                     console.log(this.state, 'ello there marta')
-                    this.props.history.push(`/messageboard/${conversationID}`)
-                  })
-              .catch(err => console.log(err));
-          };
+                   this.getMyMessages()                  
+                   this.setState({
+                         message:''
+                   })
+              })     
+              .catch(err => console.log(err))
+          }
         
 
       getMyMessages = () =>{
             const conversationID = this.props.match.params.id
           axios.get(`${process.env.REACT_APP_API_URL}/api/messages/${conversationID}`, {withCredentials: true})
             .then((messages) => {
+                  console.log('messages.data', messages.data)
                   this.setState({
                         convo:messages.data
                   })
+                  console.log(this.state.convo.messages)
             })
       }
 
       componentDidMount (){
-            this.getMyMessages()
-      }
+      this.getMyMessages()
+      //       // .then((messages)=>{
+      //       //       this.setState
+      //       // })
+      //       // console.log ('hheheheheheh', this.state.convo)
+       }
 
       
       handleChange = event => {
@@ -51,6 +61,7 @@ class MessageBoard extends Component {
 
 
       render() {
+          console.log(this.state,' state voy a cortarme als venas')
             return (
                   <div>
                      <h1>MESSAGE BOARD</h1>
@@ -65,7 +76,13 @@ class MessageBoard extends Component {
         <input value = "submit" type="submit" class="submit-btn"/>
         </form>
         <div class="display-area">
-            Existing comment:
+            Existing comment: 
+            {/* <p>{this.state.message}</p> */}
+           {this.state.convo.messages ? this.state.convo.messages.map((message)=>{
+                  return(
+                      <p>{message.message}</p>
+                  )
+            }):null} 
         </div>
         
     </section>

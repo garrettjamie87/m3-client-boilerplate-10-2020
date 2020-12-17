@@ -65,7 +65,6 @@ class MessageBoard extends Component {
 
 
       render() {
-          console.log(this.state,' state voy a cortarme als venas')
             return (
                   <div className='message-form'>
                   <Navbar />
@@ -88,7 +87,10 @@ class MessageBoard extends Component {
             {/* <p>{this.state.message}</p> */}
            {this.state.convo.messages ? this.state.convo.messages.map((message)=>{
                   return(
+                        <div>
                       <p>{message.message}</p>
+                      <p>{message.sender.username}</p>
+                      </div>
                   )
             }):null} 
         </div>

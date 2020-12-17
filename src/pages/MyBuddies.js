@@ -70,7 +70,9 @@ import Col from 'react-bootstrap/Col'
                                     
                                      <Container fluid="md">
                                            <Row>
-                                          <Col><img className= 'avatar' src= {avatar}/></Col><br/>
+                                          <Col>
+                                          <img className= 'avatar' src= {avatar}/></Col>
+
                                           <Col className = 'username'>{buddy.username}</Col>
                                           </Row>
                                           </Container>

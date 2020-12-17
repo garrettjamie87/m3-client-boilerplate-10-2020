@@ -12,7 +12,7 @@ import BuddyDetail from './pages/BuddyDetail'
 import MyBuddiesList from './pages/MyBuddiesList'
 import EditProfile from './pages/EditProfile'
 import MessageBoard from './pages/MessageBoard'
-
+import MyConvos from './pages/MyConvos'
 
 
 import AnonRoute from './components/AnonRoute';
@@ -43,6 +43,7 @@ class App extends Component {
 
           <PrivateRoute exact path="/editprofile" component={EditProfile} />
           <PrivateRoute exact path="/messageboard/:id" component={MessageBoard} />
+          <PrivateRoute exact path="/myconvos" component={MyConvos} />
 
 
 

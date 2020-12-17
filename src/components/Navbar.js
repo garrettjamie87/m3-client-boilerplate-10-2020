@@ -9,18 +9,17 @@ class Navbar extends Component {
     // const { user, logout, isLoggedin } = this.props;
     return (
       <nav className="navbar">
-        <Link to={'/'} id='home-btn'>
-          <h4>CASA</h4>
+        <Link to={'/mybuddies'} id='home-btn'>
+          <h4>Buddies</h4>
         </Link>
         {this.props.isLoggedIn ? (
           <>
-            {/* <p>username: {this.props.user && this.props.user.username}</p> */}
-            <Button className = 'butt' onClick={this.props.logout}>Logout</Button>
-         
-            {/* <p>username: {this.props.user && this.props.user.username}</p> */}
             <Link to = '/myconvos'>
             <Button className = 'butt'>MyConvos</Button>
             </Link>
+            <Button className = 'butt' onClick={this.props.logout}>Logout</Button>
+         
+           
           </>
         ) : (
           <>

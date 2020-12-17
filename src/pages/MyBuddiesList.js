@@ -5,6 +5,7 @@ import {Link} from "react-router-dom"
 import "./mybuddieslist.css";
 import Button from "react-bootstrap/Button";
 import avatar from "../images/blankavatar.png";
+import Navbar from './../components/Navbar';
 
 
 
@@ -44,9 +45,10 @@ class MyBuddiesList extends Component {
 
       
       render() {
-            
             return(
                   <div className = 'my-buddies-list'>
+                              <Navbar/>
+
                      <h1 className='heading'>YOUR BUDDIES</h1>   
                         {this.state.listOfBuddies.buddyId && this.state.listOfBuddies.buddyId.map((buddy)=>{
                               return (

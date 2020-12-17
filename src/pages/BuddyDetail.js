@@ -5,6 +5,7 @@ import "./buddydetail.css";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom"
 import avatar from "../images/blankavatar.png";
+import Navbar from './../components/Navbar';
 
 
 
@@ -63,6 +64,7 @@ class BuddyDetail extends Component {
       render() {
             return (
                   <div className="buddy-detail">
+                  <Navbar/>
                      <h1>YOUR MATCH</h1>  
                      <img className= 'avatar' src= {avatar}/>
 

@@ -3,6 +3,8 @@ import { withAuth } from "../context/auth-context";
 import axios from "axios";
 import "./aboutme.css";
 import Button from "react-bootstrap/Button";
+import Navbar from './../components/Navbar';
+
 
 
 class AboutMe extends Component {
@@ -39,8 +41,10 @@ class AboutMe extends Component {
   render() {
 
     return (
+      
 
       <div className="aboutme">
+        <Navbar />
 
         <h1>
           WELCOME <u>{this.props.user && this.props.user.username}</u>

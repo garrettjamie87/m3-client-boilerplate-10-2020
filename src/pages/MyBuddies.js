@@ -5,8 +5,10 @@ import {Link} from "react-router-dom"
 import "./mybuddies.css";
 import Button from "react-bootstrap/Button";
 import avatar from "../images/blankavatar.png";
-
-
+import Navbar from './../components/Navbar';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
  class MyBuddies extends Component {
@@ -50,6 +52,8 @@ import avatar from "../images/blankavatar.png";
 
             return(
                   <div className = 'mybuddies'>
+                          <Navbar />
+
                     
                      <h1>YOUR MATCHES</h1>   
                         
@@ -61,19 +65,16 @@ import avatar from "../images/blankavatar.png";
                                     {this.state.userInfo.level === buddy.level && this.state.userInfo.sex === buddy.sex ? 
                                     
                                     (
-                                      <div className = 'grid'>
                                       <Link to = {`/buddydetail/${buddy._id}`}>
                                     
-                                    <ul>
-                                    <img className= 'avatar' src= {avatar}/>
-                                         <li className = 'username'> {buddy.username}</li>
-                                         {/* <li> {buddy.level}</li>
-                                         <li> {buddy.topics}</li> */}
-                                          
-                                     </ul>
                                     
+                                     <Container fluid="md">
+                                           <Row>
+                                          <Col><img className= 'avatar' src= {avatar}/></Col><br/>
+                                          <Col className = 'username'>{buddy.username}</Col>
+                                          </Row>
+                                          </Container>
                                      </Link>
-                                    </div>
                                 ): null}
                           </div>
                           )

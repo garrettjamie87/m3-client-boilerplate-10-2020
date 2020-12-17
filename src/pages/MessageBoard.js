@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { withAuth } from '../context/auth-context';
 import axios from "axios";
+import Navbar from './../components/Navbar';
+import "./messageboard.css";
+import Button from "react-bootstrap/Button";
+
 
 class MessageBoard extends Component {
       constructor(props){
@@ -63,7 +67,9 @@ class MessageBoard extends Component {
       render() {
           console.log(this.state,' state voy a cortarme als venas')
             return (
-                  <div>
+                  <div className='message-form'>
+                  <Navbar />
+
                      <h1>MESSAGE BOARD</h1>
                      <section class="message-board">
                      <div class="title">
@@ -73,9 +79,11 @@ class MessageBoard extends Component {
                   </div>
                   <form onSubmit = {this.handleMessageSubmit}>
         <textarea name = 'message' value = {this.state.message} onChange = {this.handleChange} class="message" type="text"></textarea><br/>
-        <input value = "submit" type="submit" class="submit-btn"/>
+        
+        <Button className='mensaje-submit' value = "submit" type="submit" class="submit-btn">SUBMIT</Button>
+        
         </form>
-        <div class="display-area">
+        <div class="display-area" className = 'comment'>
             Existing comment: 
             {/* <p>{this.state.message}</p> */}
            {this.state.convo.messages ? this.state.convo.messages.map((message)=>{

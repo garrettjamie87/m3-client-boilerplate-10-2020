@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -27,7 +27,6 @@ class App extends Component {
     return (
       <div className="container">
         
-        <Navbar />
 
 
         <Switch>

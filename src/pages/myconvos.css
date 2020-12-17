@@ -1,0 +1,22 @@
+.profile-pic{
+width: 115px;
+height: auto;
+}
+
+.my-convos{
+      text-align: center;
+
+}
+
+.my-convos p {
+text-align: center;
+color: #2eafa5;
+}
+
+.my-convos-container{
+      margin-top: 80px;
+}
+
+h1{
+      text-align: center;
+}

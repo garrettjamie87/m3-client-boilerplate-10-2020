@@ -4,6 +4,10 @@
 .list{
       list-style-type: none;
       color:  #2eafa5;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
 }
 
 .my-buddies-list{

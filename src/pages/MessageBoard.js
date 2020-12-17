@@ -66,10 +66,12 @@ class MessageBoard extends Component {
 
       render() {
             return (
-                  <div className='message-form'>
+                  <>
                   <Navbar />
 
-                     <h1>MESSAGE BOARD</h1>
+       <div className='message-form'>
+
+                     <h1>CHAT BOARD</h1>
                      <section class="message-board">
                      <div class="title">
                      <h2>
@@ -83,13 +85,13 @@ class MessageBoard extends Component {
         
         </form>
         <div class="display-area" className = 'comment'>
-            Existing comment: 
+            <u>Last message:</u> 
             {/* <p>{this.state.message}</p> */}
            {this.state.convo.messages ? this.state.convo.messages.map((message)=>{
                   return(
                         <div>
                       <p>{message.message}</p>
-                      <p>{message.sender.username}</p>
+                      <p>-{message.sender.username}</p>
                       </div>
                   )
             }):null} 
@@ -97,6 +99,7 @@ class MessageBoard extends Component {
         
     </section>
                   </div>
+                  </>
             )
       }
 }

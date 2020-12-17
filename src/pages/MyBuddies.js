@@ -51,8 +51,10 @@ import Col from 'react-bootstrap/Col'
       render() {
 
             return(
+                  <>
+                  <Navbar />
+
                   <div className = 'mybuddies'>
-                          <Navbar />
 
                     
                      <h1>YOUR MATCHES</h1>   
@@ -85,6 +87,7 @@ import Col from 'react-bootstrap/Col'
                     <Button href= '/EditProfile' className='mybuddiesbutton'>EDIT PROFILE &#x2192;</Button>
 
                   </div>
+                  </>
             )
       }
 }

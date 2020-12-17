@@ -3,6 +3,8 @@ import { withAuth } from "../context/auth-context";
 import axios from "axios";
 import "./editprofile.css";
 import Button from "react-bootstrap/Button";
+import Navbar from './../components/Navbar';
+
 
 class EditProfile extends Component {
   constructor(props) {
@@ -52,7 +54,13 @@ class EditProfile extends Component {
 
   render() {
     return (
+      
+        <>
+      <Navbar/>
+
       <div className="aboutme">
+      
+
         <h1>
          YOUR PROFILE <u>{this.props.user && this.props.user.username}</u>
         </h1>
@@ -127,6 +135,7 @@ class EditProfile extends Component {
             </Button>
         </div>
       </div>
+      </>
     );
   }
 }

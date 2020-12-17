@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { withAuth } from '../context/auth-context';
 import axios from "axios";
 import {Link} from "react-router-dom"
-import "./mybuddies.css";
+import "./myconvos.css";
+import Navbar from './../components/Navbar';
 
 
 
@@ -37,10 +38,13 @@ import "./mybuddies.css";
             const currentUserId = this.props.user._id;
 
             return (
-                  <div>
-                  <p>HELOOOOOOOOOOO</p>
-                       <div>
-                       
+                  
+                        <>
+                  <Navbar/>
+
+                  <div className = 'my-convos-container'>
+                 
+                       <h1>YOUR CHATS</h1>
                         {this.state.listOfConvos 
                               ? this.state.listOfConvos.map((convo)=>{
 
@@ -56,10 +60,10 @@ import "./mybuddies.css";
 
                                     return (
 
-
-                                          <div  key={convo._id}>
+                                    
+                                          <div className='my-convos'  key={convo._id}>
                                                 <Link to={`/messageboard/${convo._id}`} >
-                                                      <img src={otherUser.profilePicture}/>
+                                                      <img className = 'profile-pic' src={otherUser.profilePicture}/>
                                                       <p>{otherUser.username}</p>
                                                 </Link>
                                     
@@ -68,7 +72,8 @@ import "./mybuddies.css";
                         }):null
                         }
                         </div>
-                  </div>
+                        </>
+                
             )
       }
 }

@@ -3,9 +3,13 @@
 h1{
       font-family: 'Oswald', sans-serif;
 }
-/* .message-form{
-padding-top: 100px;
-} */
+.message-form{
+padding: 25px;
+}
+
+.message-form h2 {
+      margin-bottom: 25px;
+}
 
 .mensaje-submit {
       background-color: #e75481 !important;
@@ -14,4 +18,5 @@ padding-top: 100px;
 
 .comment{
       font-family: 'Poppins', sans-serif;
+      margin-top: 40px; 
 }

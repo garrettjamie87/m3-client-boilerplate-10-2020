@@ -63,8 +63,10 @@ class BuddyDetail extends Component {
 
       render() {
             return (
-                  <div className="buddy-detail">
+                 <>
                   <Navbar/>
+
+                  <div className="buddy-detail">
                      <h1>YOUR MATCH</h1>  
                      <img className= 'avatar' src= {avatar}/>
 
@@ -85,9 +87,11 @@ class BuddyDetail extends Component {
           </Button>} <br/>
           <Button onClick = {this.handleConversation}>SEND A MESSAGE</Button><br/>
 
-          <Link to = {`/mybuddieslist/${this.props.user._id}`}>VIEW MY BUDDIES</Link>
-
+<div className='link-bud'>
+          <Link  to = {`/mybuddieslist/${this.props.user._id}`}>VIEW MY BUDDIES</Link>
+</div>
                   </div>
+                  </>
             )
       }
 }     

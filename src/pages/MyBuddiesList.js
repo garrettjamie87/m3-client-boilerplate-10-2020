@@ -46,8 +46,10 @@ class MyBuddiesList extends Component {
       
       render() {
             return(
+<>
+                  <Navbar/>
+
                   <div className = 'my-buddies-list'>
-                              <Navbar/>
 
                      <h1 className='heading'>YOUR BUDDIES</h1>   
                         {this.state.listOfBuddies.buddyId && this.state.listOfBuddies.buddyId.map((buddy)=>{
@@ -76,6 +78,7 @@ class MyBuddiesList extends Component {
                     }
                     )}
                   </div>
+                  </>
             )
       }
 }

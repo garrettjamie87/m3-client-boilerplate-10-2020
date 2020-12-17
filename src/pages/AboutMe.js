@@ -41,10 +41,12 @@ class AboutMe extends Component {
   render() {
 
     return (
-      
+      <>
+
+      <Navbar />
+
 
       <div className="aboutme">
-        <Navbar />
 
         <h1>
           WELCOME <u>{this.props.user && this.props.user.username}</u>
@@ -116,6 +118,7 @@ class AboutMe extends Component {
           </form>
         </div>
       </div>
+      </>
     );
   }
 }
